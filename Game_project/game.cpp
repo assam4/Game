@@ -18,17 +18,12 @@ void game()
 	ifstream is("Questions.txt");
 	if (!is.is_open()) throw "Cannot loading game...Try latter";
 	Inputstream read(is);
-	try {
 		while (!read.eofbit())
 		{
-
 			questions.push_back(read.readfromJSON());
 			answer1.push_back(read.readfromJSON());
 			answer2.push_back(read.readfromJSON());
-
 		}
-	}
-	catch (int) { }
 
 	if (questions.empty()) throw "No data...";
 
