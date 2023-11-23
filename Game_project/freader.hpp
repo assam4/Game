@@ -69,7 +69,7 @@ private:
 string Inputstream::readfromJSON()
 {
     m_read.ignore(40, '"');
-    if (m_read.eof()) return "end of file.";
+    if (m_read.eof()) throw 0;
     string ciphered_text;
     getline(m_read, ciphered_text, '"');
 
