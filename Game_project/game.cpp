@@ -9,16 +9,8 @@ static vector<string> answer2;
 
 string answer_shadow(const string& answer)
 {
-	if (answer[0] == '*')
-	{
-	
-		string temp;
-		for (int i = 1; i < answer.size(); ++i)
-			temp += answer[i];
-		return temp;
-
-	}
-	return answer;
+	if (answer[0] == '*') return answer.substr(1);
+	else return answer;
 }
 
 void game()
@@ -36,7 +28,7 @@ void game()
 
 		}
 	}
-	catch (...) { }
+	catch (int) { }
 
 	if (questions.empty()) throw "No data...";
 
