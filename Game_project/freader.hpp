@@ -72,7 +72,7 @@ string Inputstream::readfromJSON()
     if (m_read.eof()) throw 0;
     string ciphered_text;
     getline(m_read, ciphered_text, '"');
-
+    m_read.ignore(100, ':');
     string deciphered_text = decoder.decipher(ciphered_text);
     return deciphered_text;    
 }
