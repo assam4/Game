@@ -169,7 +169,7 @@ bool Game::gameprocess()
     }
 
     cout << "Game Over ." << '\n' <<
-        m_qa.size() << "questions :" << m_correct_answers <<
+        m_qa.size() << " questions :" << m_correct_answers <<
         " correct answers" << endl;
     return true;
 }
