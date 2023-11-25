@@ -130,10 +130,11 @@
     <ClInclude Include="freader.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Questions.txt" />
+    <ClCompile Include="freader.cpp" />
+    <ClCompile Include="game.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="game.cpp" />
+    <Text Include="..\..\Questions.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

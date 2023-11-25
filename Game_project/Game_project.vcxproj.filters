@@ -20,11 +20,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Questions.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="game.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="freader.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Questions.txt">
+      <Filter>Исходные файлы</Filter>
+    </Text>
   </ItemGroup>
 </Project>
