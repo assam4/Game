@@ -119,20 +119,22 @@ void Question_Answers::show_answers() noexcept
 {
     cout << "[1]" << m_ranswer << "[2]" << m_wanswer << endl;
 }
+const Min_answers_count = 0 ;
+const Max_answers_count = 2 ;
 
 bool Question_Answers::check_answer() noexcept
 {
     int index;
     cout << "Choose one of this variants ." << endl;
     cin >> index;
-    while (index < 0 || index > 2)
+    while (index < Min_answers_count || index > Max_answers_count)
     {
         cout << "There is no such option";
         cin.clear();
         cin >> index;
     }
-
-    return (index == 1) ? true : false;
+    int correct_answer = 1 ;
+    return (index == correct_answer) ? true : false;
 
 }
 
