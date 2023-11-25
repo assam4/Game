@@ -126,12 +126,11 @@ bool Question_Answers::check_answer() noexcept
 {
     int index;
     cout << "Choose one of this variants ." << endl;
-    cin >> index;
-    while (index < Min_answers_count || index > Max_answers_count)
+    while (!(cin>>index) || index < Min_answers_count || index > Max_answers_count)
     {
         cout << "There is no such option";
         cin.clear();
-        cin >> index;
+        cin.ignore(ignore_count,'\n');
     }
     int correct_answer = 1 ;
     return (index == correct_answer) ? true : false;
