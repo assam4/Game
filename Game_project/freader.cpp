@@ -51,14 +51,14 @@ bool AbstractInput::eofbit()
 
 // methods jsoninput 
 InputJSON::~InputJSON() { m_input.close(); }
-
+const int ignore_count = 100 ;
 string InputJSON::read()
 {
-    m_input.ignore(40, '"');
+    m_input.ignore(ignore_count, '"');
     if (m_input.eof()) throw 0;
     string ciphered_text;
     getline(m_input, ciphered_text, '"');
-    m_input.ignore(100, ':');
+    m_input.ignore(ignore_count, ':');
     string deciphered_text = decoder.decipher(ciphered_text);
     return deciphered_text;
 }
