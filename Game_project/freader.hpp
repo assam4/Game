@@ -52,18 +52,13 @@ CaesarCipher decoder ;
 class Inputstream {
 public:
     Inputstream(std::istream& r = std::cin ): m_read(r)   {}
-    Inputstream(const Inputstream& other) = delete;
+    Inputstream(const Inputstream& other) = default;
     bool eofbit() { return m_read.eof(); }
     ~Inputstream() {}
-
-
 public:
     string readfromJSON();
-   
-
 private:
-
-    std::istream& m_read;  
+     std::istream& m_read;  
 };
 
 string Inputstream::readfromJSON()
@@ -81,18 +76,12 @@ class Outputstream
 {
 public:
     Outputstream(std::ostream& w = std::cout) : m_write(w) {}
-    Outputstream(const Inputstream& other) = delete;
+    Outputstream(const Inputstream& other) = default;
     ~Outputstream() {}
-
-
 public:
     bool writeJSON(string, string, string );
-
-
 private:
-
     std::ostream& m_write;
-
 };
 
 bool Outputstream::writeJSON(string q, string a1 , string a2 )
