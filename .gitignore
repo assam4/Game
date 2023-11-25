@@ -31,4 +31,7 @@
 *.out
 *.app
 
+# Visual Studio Solution files
+*.sln
+*.vcxproj
 .vs/
