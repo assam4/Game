@@ -3,6 +3,9 @@
 // CeaserCipher methods 
 static const char sistem_chars = 32;
 static const char max_limit = 126;
+static const int ignore_count = 100 ;
+static const int Min_answers_count = 0 ;
+static const int  Max_answers_count = 2 ;
 
 
 char CaesarCipher::chardecipher(char ciphered)
@@ -51,7 +54,7 @@ bool AbstractInput::eofbit()
 
 // methods jsoninput 
 InputJSON::~InputJSON() { m_input.close(); }
-static const int ignore_count = 100 ;
+
 string InputJSON::read()
 {
     m_input.ignore(ignore_count, '"');
@@ -119,8 +122,6 @@ void Question_Answers::show_answers() noexcept
 {
     cout << "[1]" << m_ranswer << "[2]" << m_wanswer << endl;
 }
-static const int Min_answers_count = 0 ;
-static const int  Max_answers_count = 2 ;
 
 bool Question_Answers::check_answer() noexcept
 {
