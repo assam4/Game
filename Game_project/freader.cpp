@@ -119,8 +119,8 @@ void Question_Answers::show_answers() noexcept
 {
     cout << "[1]" << m_ranswer << "[2]" << m_wanswer << endl;
 }
-const Min_answers_count = 0 ;
-const Max_answers_count = 2 ;
+const int Min_answers_count = 0 ;
+const int  Max_answers_count = 2 ;
 
 bool Question_Answers::check_answer() noexcept
 {
