@@ -28,7 +28,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\Questions.txt">
+    <Text Include="Questions.txt">
       <Filter>Исходные файлы</Filter>
     </Text>
   </ItemGroup>
